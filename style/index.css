@@ -1,0 +1,383 @@
+/* Main Containers */
+body, button {
+  font-family: VT323;
+}
+button {
+  font-size: xx-large;
+}
+
+.outer-container {
+  height: 720px;
+  width: 1280px;
+  background: #eee;
+  border: 5px solid gainsboro;
+}
+
+.game-window {
+  height: 720px;
+  width: 1280px;
+  float: left;
+  position: relative;
+}
+
+.main-menu{
+  height: 720px;
+  width: 1280px;
+  background-image: url("../src/frontpage_background.jpg");
+  z-index: 10;
+  right: 0px;
+  top: 0px;
+}
+
+.menu-button{
+  background-color: darkslateblue;
+  border: 5px solid black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  cursor: pointer;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  display: block;
+}
+
+.top-bar{
+  width: 100%;
+  height: 100px;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  z-index: 40;
+  font-size: 100px;
+  text-align: center;
+  background-color: darkslateblue;
+  color: #eee;
+}
+
+.top-bar-left {
+  height: 100%;
+  width: auto;
+  float:left;
+  margin-left: 2px;;
+}
+.top-bar-right{
+  height: 100%;
+  width: auto;
+  float: right;
+  margin-right: 2px;
+}
+
+
+.vertical-center{
+  top: 50%;
+  margin: 0;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  position: absolute;
+  display: block;
+}
+
+/* Settings */
+.settings{
+  height: 690px;
+  width: 600px;
+  background-color: darkslateblue;
+  position: absolute;
+  margin: 0;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  color: white;
+  border: 4px solid black;
+  visibility: collapse;
+  z-index: 10;
+}
+
+.settings-header{
+  text-align: center;
+  font-size: 50px;
+}
+
+.volume{
+  text-align: center;
+  font-size: 50px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.difficulty{
+  position: relative;
+  top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.settings-button{
+  background-color: purple;
+  border: 3px solid black;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+  width: 170px;
+  height: 100px;
+  position: relative;
+  visibility: visible;
+}
+
+.settings-button-outer{
+  border: 5px solid yellow;
+  width: 170px;
+  height: 100px;
+  position:relative;
+  display: inline-block;
+  visibility: collapse;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+/* Tutorial Section */
+
+.tutorial{
+  background-color: gainsboro;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  visibility: collapse;
+  z-index: 10;
+  right: 0px;
+  top: 0px;
+}
+
+.tutorial-header{
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+.tutorial-subheader{
+  text-align: center;
+  font-size: 40px;
+}
+
+.tutorial-img{
+  width: 80px;
+  height: auto;
+  margin-left: auto;
+  margin-right:auto;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.tutorial-btn{
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 200px;
+  height: 75;
+  margin: 10px;
+  position: relative;
+  display: inline;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 10%;
+}
+
+/* Game Section --- Right Section */
+
+#actual_game{
+    height: 720px;
+    width: 1280px;
+    background-color: white;
+    z-index: 10;
+    right: 0px;
+    top: 0px;
+    visibility: collapse;
+}
+
+#game_right_section {
+    height: 600px;
+    width: 320px;
+    position: absolute;
+    left: 960px;
+    top: 0px;
+    color: black;
+    z-index: 1;
+}
+
+#scoreword, #danger, #level {
+  text-align:center;
+  font-size: 60px;
+}
+
+#score_num, #danger_num, #level_num {
+  text-align: center;
+  font-size: 40px;
+  color: darkblue;
+}
+
+#player {
+  position: absolute;
+  width: 80px;
+  left: 600px;
+  top: 300px;
+  z-index: 11;
+  visibility: inherit;
+}
+
+#dead{
+  position: absolute;
+  width: 80px;
+  left: 600px;
+  top: 300px;
+  z-index: 11;
+  visibility: hidden;
+}
+
+.curAstroid {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.curAstroid img{
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.curPortal{
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  left: 0px;
+  top: 0px;
+}
+
+.curPortal img{
+  position: absolute;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.curShield{
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  left: 0px;
+  top: 0px;
+}
+
+.curShield img{
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Add your styling here */
+
+/* Get Ready */
+.get-ready{
+  height: 300px;
+  width: 400px;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  font-size: 75px;
+  z-index:15;
+  visibility: collapse;
+}
+
+.get-ready-subtext{
+  font-size:40px;
+}
+
+.get-ready-img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Game over */
+.game-over{
+  height: 220px;
+  width: 600px;
+  background-color: darkslateblue;
+  text-align: center;
+  color: white;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 50;
+  font-size: 30px;
+  visibility: collapse;
+}
+
+.game-over-text{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.game-over-btn{
+  height: auto;
+  width: auto;
+  background-color: gainsboro;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}

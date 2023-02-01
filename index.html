@@ -1,0 +1,115 @@
+<html>
+
+<title>Asteroids</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<!-- HTML -->
+<body>
+  <div class='outer-container'>
+      <div class='game-window'>
+        
+        <!-- Main Menu -->
+        <div id="main_menu" class="main-menu">
+          <div id="top-bar" class="top-bar">
+            <img class="top-bar-left" src="src/asteroid.png">
+            <img class="top-bar-right" src="src/asteroid.png">
+            <div>ASTEROIDS!</div>
+
+          </div>
+          <div id="buttons" class="vertical-center">
+            <button id = "play" class="menu-button">Play game!</button>
+            <button id = "open-settings" class="menu-button">Settings</button>
+          </div>
+        </div>
+        
+        <!-- Settings -->
+        <div id="settings_menu" class="settings">
+          <div id="settings-header" class="settings-header"> 
+            <strong>Settings</strong></div>
+
+          <div id="volume" class="volume">
+            <p><strong>Volume:</strong> <span id="val"></span></p>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+          </div>
+
+          <div id="difficulty" class="difficulty"> 
+            <strong>Difficulty</strong>
+            <div id="set-buttons">
+              <div id="easy-outer" class="settings-button-outer">
+                <button id="easy" class="settings-button">Easy</button>
+              </div>
+          <div id="normal-outer" class="settings-button-outer">
+            <button id="normal" class="settings-button" >Normal</button>
+          </div>
+          <div id="hard-outer" class="settings-button-outer">
+            <button id="hard" class="settings-button">Hard</button>
+          </div>
+
+            </div>
+            <button id="close" class="settings-button">Close</button>
+          </div>
+    
+        </div>
+
+
+        <!-- Tutorial -->
+      <div id="tutorial_menu" class="tutorial">
+        <div id="tut-header" class="tutorial-header"> <strong>How to play</strong> </div>
+        <div id="tut-sub-1" class="tutorial-subheader"><strong>Avoid</strong> <em> asteroids!</em></div>
+        <img src="src/asteroid.png" class="tutorial-img">
+        <div id="tut-sub-2" class="tutorial-subheader"><strong>Collect</strong> <em>shields</em>! <strong>Travel</strong>  through <em>portals</em> to the next level!</div> 
+        <img src="src/shield.gif" class="tutorial-img">
+        <img src="src/port.gif" class="tutorial-img">
+        <div id="tut-sub-3" class="tutorial-subheader"><strong>Gain</strong> as many <em>points</em> as possible!</div>
+
+        <button id="tut-start" class="tutorial-btn">Start</button>
+      </div>
+
+        <!-- Actual Game -->
+        <div id="actual_game">
+          <div class="asteroidSection">
+              <div class="curAstroid"> </div>
+          </div>
+          <div class="curPortal"></div>
+          <div class="curShield"></div>
+          <img id="player" src="src/player/player.gif">
+          <img id="dead" src="src/player/player_touched.gif">
+           <!-- Get Ready! window -->
+          <div id="game_right_section">
+              <div id="scoreword">
+                  SCORE
+                  <div id="score_num">0</div>
+              </div>
+              <div id="danger">DANGER
+              <div id="danger_num"></div></div>
+              <div id="level">LEVEL
+              <div id="level_num"></div></div>
+          </div>
+          <div id="get_ready" class="get-ready">
+            <strong>Get Ready!</strong>
+            <img id="keys" class="get-ready-img" src="./src/arrowkeys.png">
+           <div class="get-ready-subtext">Use arrow keys to move.</div> 
+          </div>
+        </div>    
+      </div> <!-- end game-window -->
+
+      <!-- Game over window -->
+      <div id="game_over" class="game-over">
+          <p class="game-over-text">GAME OVER!</p>
+          <p class="game-over-text">YOU HAVE TO FIX YOUR SPACESHIP!</p>
+          <p id="final_score" class="game-over-text"></p>
+          <button id="game-over-btn" class="game-over-btn">Start Over</button>
+      </div>
+  </div> <!-- end outer-container -->
+</body>
+
+</html>
